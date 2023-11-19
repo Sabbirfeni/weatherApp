@@ -21,29 +21,29 @@ const setWeather = weather => {
 
     // weatherImage.src = `${ICON_URL}${weather.icon}.png`;
     if(weather.main === 'Clouds') {
-        weatherIcon.src = '../src/images/clouds.png'
+        weatherIcon.src = './src/images/clouds.png'
     } else if(weather.main === 'Haze') {
-        weatherIcon.src = '../src/images/haze.png'
+        weatherIcon.src = './src/images/haze.png'
     } else if(weather.main === 'Mist') {
-        weatherIcon.src = '../src/images/mist.png'
+        weatherIcon.src = './src/images/mist.png'
     } else if(weather.main === 'Drizzle') {
-        weatherIcon.src = '../src/images/drizzle.png'
+        weatherIcon.src = './src/images/drizzle.png'
     } else if(weather.main === 'Thunderstorm') {
-        weatherIcon.src = '../src/images/storm.png'
+        weatherIcon.src = './src/images/storm.png'
     } else if(weather.main === 'Rain') {
-        weatherIcon.src = '../src/images/rain.png'
+        weatherIcon.src = './src/images/rain.png'
     } else if(weather.main === 'Snow') {
-        weatherIcon.src = '../src/images/snow.png'
+        weatherIcon.src = './src/images/snow.png'
     } else if(weather.main === 'Clear') {
-        weatherIcon.src = '../src/images/clear.png'
+        weatherIcon.src = './src/images/clear.png'
     } else if(weather.main === 'Fog') {
-        weatherIcon.src = '../src/images/fog.png'
+        weatherIcon.src = './src/images/fog.png'
     } else {
-        weatherIcon.src = '../src/images/wind.png'
+        weatherIcon.src = './src/images/wind.png'
     }
     
     city.innerHTML = weather.name;
-    temp.innerHTML = weather.temp + '°c';
+    temp.innerHTML = Math.round(weather.temp - 273.15) + '°c';
     humidity.innerHTML = weather.humidity + '%';
     pressure.innerHTML = weather.pressure;
     weatherStatus.innerHTML = weather.main;
